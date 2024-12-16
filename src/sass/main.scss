@@ -11,7 +11,7 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
-	scroll-padding-top: 120px;
+	scroll-padding-top: 90px;
 }
 
 body {
@@ -34,7 +34,8 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	// box-shadow: 3px 3px 5px rgba($color: #000000, $alpha: 0.2);
+	transition: background-color .3s;
+	
 
 	.logo {
 		font-family: 'Playfair Display', sans-serif;
@@ -93,7 +94,10 @@ nav {
 		}
 	}
 }
-
+.active2{
+	background-color: #fff;
+	box-shadow: 3px 3px 5px rgba($color: #000000, $alpha: 0.2);
+}
 .sidebar {
 	.close-icon {
 		i {
@@ -331,10 +335,10 @@ header {
 	}
 }
 .animation {
-	animation: opacityy 1s forwards;
+	animation: opacityy .5s forwards;
 }
 .animation0 {
-	animation: opacityy0 1s forwards;
+	animation: opacityy0 .5s forwards;
 }
 @keyframes opacityy {
 	to {
