@@ -34,8 +34,7 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	transition: background-color .3s;
-	
+	transition: background-color 0.3s;
 
 	.logo {
 		font-family: 'Playfair Display', sans-serif;
@@ -94,8 +93,8 @@ nav {
 		}
 	}
 }
-.active2{
-	background-color: #fff;
+.active2 {
+	background-color: $creme;
 	box-shadow: 3px 3px 5px rgba($color: #000000, $alpha: 0.2);
 }
 .sidebar {
@@ -267,7 +266,7 @@ header {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	.heading{
+	.heading {
 		margin-top: 2em;
 	}
 	.offers {
@@ -282,6 +281,7 @@ header {
 			background-color: $light-creme;
 			width: 200px;
 			border-radius: 12px;
+			transition: transform 0.3s;
 			box-shadow: 0 0 14px rgba($color: #000000, $alpha: 0.25);
 			border: 1px solid rgba($color: $purple, $alpha: 0.5);
 			margin: 1em 0;
@@ -332,13 +332,134 @@ header {
 			align-self: flex-end;
 			margin-right: 1.3em;
 		}
+		.offer:hover {
+			transform: scale(1.02);
+		}
 	}
 }
 .animation {
-	animation: opacityy .5s forwards;
+	animation: opacityy 0.5s forwards;
 }
 .animation0 {
-	animation: opacityy0 .5s forwards;
+	animation: opacityy0 0.5s forwards;
+}
+.contact {
+	background-color: $light-creme;
+	padding-bottom: 20vh;
+	.heading {
+		
+		padding: 1em 1em 2em;
+		&:after {
+			width: 80px;
+	
+		}
+	}
+	.wrapper{
+		.contact-box{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-top: 2em;
+			gap: 1em;
+			.contact-btn{
+				background: none;
+				border: 1px solid $purple;
+				padding: .7em 2.2em;
+				font-size: 1.5rem;
+				cursor: pointer;
+				border-radius: 6px;
+			}
+			.contact-info{
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				
+				gap: 1em;
+				input{
+					background: none;
+					border: 2px solid $purple;
+					border-radius: 6px;
+					width: 300px;
+					padding: .9em 1.6em;
+					position: relative;
+				}
+				.name-box{
+					position: relative;
+					.name{
+						z-index: 1;
+					}
+					.name:focus ~ .name-label{
+						top: 0;
+						background-color: $light-creme;
+					}
+					.name-label{
+						padding: 0 0.5em;
+						position: absolute;
+						transition: top .3s;
+						pointer-events: none;
+						z-index: 2;
+						left: 8px;
+						top: 50%;
+						font-size: 1.4rem;
+						transform: translateY(-50%);
+					}
+				}
+				.email-box{
+					position: relative;
+					.email{
+						z-index: 1;
+					}
+					.email:focus ~ .email-label{
+						top: 0;
+						background-color: $light-creme;
+					}
+					.email-label{
+						padding: 0 0.5em;
+						position: absolute;
+						transition: top .3s;
+						pointer-events: none;
+						z-index: 2;
+						left: 8px;
+						top: 50%;
+						font-size: 1.4rem;
+						transform: translateY(-50%);
+					}
+				}
+			}
+			.message-box{
+				textarea{
+					background: none;
+					border: 2px solid $purple;
+					width: 300px;
+					max-width: 300px;
+					height: 200px;
+					border-radius: 6px;
+				}
+				position: relative;
+					.message{
+						z-index: 1;
+					}
+					.message:focus ~ .message-label{
+						top: 0;
+					}
+					.message-label{
+						background-color: $light-creme;
+						padding: 0 0.5em;
+						position: absolute;
+						transition: top .3s;
+						pointer-events: none;
+						z-index: 2;
+						left: 8px;
+						top: 0;
+						font-size: 1.4rem;
+						transform: translateY(-50%);
+					}
+			}
+		}
+	}
 }
 @keyframes opacityy {
 	to {
@@ -602,6 +723,57 @@ header {
 			}
 		}
 	}
+	.contact {
+		.wrapper{
+			.contact-box{
+				gap: 1.4em;
+				.contact-btn{
+					background: none;
+					border: 1px solid $purple;
+					padding: .7em 2.2em;
+					font-size: 1.5rem;
+					cursor: pointer;
+					border-radius: 6px;
+				}
+				.contact-info{
+					width: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+					
+					gap: 1.3em;
+					input{
+						width: 450px;
+						padding: 1em 1.6em;
+					}
+					.name-box{
+						position: relative;
+						.name-label{
+							font-size: 1.5rem;
+						}
+					}
+					.email-box{
+						.email-label{
+							font-size: 1.5rem;
+						}
+					}
+				}
+				.message-box{
+					textarea{
+						width: 450px;
+						max-width: 450px;
+						height: 250px;
+					}
+						.message-label{
+							padding: 0 0.5em;
+							left: 8px;
+							font-size: 1.5rem;
+						}
+				}
+			}
+		}
+	}
 }
 @media (min-width: 1200px) {
 	header {
@@ -744,7 +916,6 @@ header {
 						color: $dark;
 					}
 				}
-				
 			}
 			.offer:nth-child(odd) {
 				margin: 0;
@@ -753,12 +924,52 @@ header {
 				margin: 0;
 				margin-top: 24px;
 			}
-		
+		}
+	}
+	.contact {
+		.wrapper{
+			.contact-box{
+				gap: 1.7em;
+				.contact-btn{
+					padding: .7em 2.2em;
+					font-size: 1.7rem;
 
+				}
+				.contact-info{
+					gap: 1.4em;
+					input{
+						width: 850px;
+						padding: 1em 1.6em;
+					}
+					.name-box{
+						position: relative;
+						.name-label{
+							font-size: 1.6rem;
+						}
+					}
+					.email-box{
+						.email-label{
+							font-size: 1.6rem;
+						}
+					}
+				}
+				.message-box{
+					textarea{
+						width: 850px;
+						max-width: 850px;
+						height: 250px;
+						padding: 1em;
+					}
+						.message-label{
+							padding: 0 0.5em;
+							left: 8px;
+							font-size: 1.7rem;
+						}
+				}
 			}
 		}
 	}
-
+}
 
 @media (min-width: 1400px) {
 	nav {
@@ -838,29 +1049,25 @@ header {
 					top: 50%;
 					left: 50%;
 					transform: translate(-50%, -50%);
-				.bottom {
-					height: 50%;
-					padding: 1em;
-					text-align: center;
-					font-weight: 700;
-					padding: auto 0;
-					p {
-						color: $dark;
+					.bottom {
+						height: 50%;
+						padding: 1em;
+						text-align: center;
+						font-weight: 700;
+						padding: auto 0;
+						p {
+							color: $dark;
+						}
 					}
 				}
-				
-			}
-			.offer:nth-child(odd) {
-				margin: 0;
-			}
-			.offer:nth-child(even) {
-				margin: 0;
-				margin-top: 24px;
-			}
-		
-
+				.offer:nth-child(odd) {
+					margin: 0;
+				}
+				.offer:nth-child(even) {
+					margin: 0;
+					margin-top: 24px;
+				}
 			}
 		}
 	}
-
 }
