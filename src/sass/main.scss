@@ -266,6 +266,7 @@ header {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	margin-bottom: 4em;
 	.heading {
 		margin-top: 2em;
 	}
@@ -345,60 +346,99 @@ header {
 }
 .contact {
 	background-color: $light-creme;
-	padding-bottom: 20vh;
+	padding-bottom: 10vh;
 	.heading {
-		
 		padding: 1em 1em 2em;
 		&:after {
 			width: 80px;
-	
 		}
 	}
-	.wrapper{
-		.contact-box{
+	.wrapper {
+		.contact-box {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 			margin-top: 2em;
 			gap: 1em;
-			.contact-btn{
+			.social-info {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: wrap;
+				flex-direction: row;
+				gap: 2em;
+				margin-top: 2.5em;
+				// width: 400px;
+				.social-box {
+					background-color: rgba($color: $creme, $alpha: 0.6);
+					// width: 200px;
+					display: flex;
+					height: 208px;
+					align-items: center;
+					justify-content: center;
+					flex-direction: column;
+					border-radius: 12px;
+					font-size: 1.5em;
+					box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.15);
+					i{
+						font-size: 2.5em;
+						padding: 0.5em 0.5em .2em;
+						color: $purple;
+					}
+					h3{
+						color: $dark;
+						font-size: 1.8rem;
+						
+					}
+					text-align: center;
+					p{
+						width: 150px;
+						height: 84px;
+						font-size: 1.5rem;
+						padding: 1em;
+						word-wrap: break-word;
+					}
+				}
+			}
+			.contact-btn {
 				background: none;
 				border: 1px solid $purple;
-				padding: .7em 2.2em;
+				padding: 0.7em 2.2em;
 				font-size: 1.5rem;
 				cursor: pointer;
 				border-radius: 6px;
 			}
-			.contact-info{
+			.contact-info {
 				width: 100%;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				flex-direction: column;
-				
+
 				gap: 1em;
-				input{
+				input {
 					background: none;
+					border: none;
 					border: 2px solid $purple;
 					border-radius: 6px;
 					width: 300px;
-					padding: .9em 1.6em;
+					padding: 0.9em 1.6em;
 					position: relative;
 				}
-				.name-box{
+				.name-box {
 					position: relative;
-					.name{
+					.name {
 						z-index: 1;
 					}
-					.name:focus ~ .name-label{
+					.name:focus ~ .name-label {
 						top: 0;
 						background-color: $light-creme;
 					}
-					.name-label{
+					.name-label {
 						padding: 0 0.5em;
 						position: absolute;
-						transition: top .3s;
+						transition: top 0.1s;
 						pointer-events: none;
 						z-index: 2;
 						left: 8px;
@@ -407,19 +447,19 @@ header {
 						transform: translateY(-50%);
 					}
 				}
-				.email-box{
+				.email-box {
 					position: relative;
-					.email{
+					.email {
 						z-index: 1;
 					}
-					.email:focus ~ .email-label{
+					.email:focus ~ .email-label {
 						top: 0;
 						background-color: $light-creme;
 					}
-					.email-label{
+					.email-label {
 						padding: 0 0.5em;
 						position: absolute;
-						transition: top .3s;
+						transition: top 0.3s;
 						pointer-events: none;
 						z-index: 2;
 						left: 8px;
@@ -429,36 +469,58 @@ header {
 					}
 				}
 			}
-			.message-box{
-				textarea{
+			.message-box {
+				textarea {
 					background: none;
 					border: 2px solid $purple;
 					width: 300px;
 					max-width: 300px;
 					height: 200px;
+					padding: 1em;
 					border-radius: 6px;
 				}
 				position: relative;
-					.message{
-						z-index: 1;
-					}
-					.message:focus ~ .message-label{
-						top: 0;
-					}
-					.message-label{
-						background-color: $light-creme;
-						padding: 0 0.5em;
-						position: absolute;
-						transition: top .3s;
-						pointer-events: none;
-						z-index: 2;
-						left: 8px;
-						top: 0;
-						font-size: 1.4rem;
-						transform: translateY(-50%);
-					}
+				.message {
+					z-index: 1;
+				}
+				.message:focus ~ .message-label {
+					top: 0;
+				}
+				.message-label {
+					background-color: $light-creme;
+					padding: 0 0.5em;
+					position: absolute;
+					transition: top 0.3s;
+					pointer-events: none;
+					z-index: 2;
+					left: 8px;
+					top: 0;
+					font-size: 1.4rem;
+					transform: translateY(-50%);
+				}
 			}
 		}
+	}
+}
+//////////////footer
+footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	.logo{
+		font-family: 'Playfair Display', sans-serif;
+		color: $dark;
+		font-size: 2.5rem;
+		padding-top: .5em;
+		font-weight: 500;
+	}
+	p{
+		span{
+			font-weight: 700;
+		}
+		font-size: 1.8rem;
+		padding: 1em;
 	}
 }
 @keyframes opacityy {
@@ -724,54 +786,97 @@ header {
 		}
 	}
 	.contact {
-		.wrapper{
-			.contact-box{
+		.wrapper {
+			.contact-box {
 				gap: 1.4em;
-				.contact-btn{
+				
+			.social-info {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: wrap;
+				flex-direction: row;
+				gap: 2em;
+				margin-top: 2.5em;
+				// width: 400px;
+				.social-box {
+					background-color: rgba($color: $creme, $alpha: 0.6);
+					// width: 200px;
+					display: flex;
+					height: 308px;
+					align-items: center;
+					justify-content: center;
+					flex-direction: column;
+					border-radius: 12px;
+					font-size: 3rem;
+					box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.15);
+					i{
+						font-size: 2.4em;
+						padding: 0.5em 0.5em .4em;
+						color: $purple;
+					}
+					h3{
+						color: $dark;
+						font-size: 2.2rem;
+						text-transform: uppercase;
+						
+					}
+					text-align: center;
+					p{
+						width: 250px;
+						height: 84px;
+						font-size: 1.9rem;
+						padding: 1em;
+						word-wrap: break-word;
+					}
+				}
+			}
+				.contact-btn {
 					background: none;
 					border: 1px solid $purple;
-					padding: .7em 2.2em;
+					padding: 0.7em 2.2em;
 					font-size: 1.5rem;
 					cursor: pointer;
 					border-radius: 6px;
 				}
-				.contact-info{
+				.contact-info {
 					width: 100%;
 					display: flex;
 					justify-content: center;
 					align-items: center;
 					flex-direction: column;
-					
+
 					gap: 1.3em;
-					input{
+					input {
 						width: 450px;
 						padding: 1em 1.6em;
 					}
-					.name-box{
+					.name-box {
 						position: relative;
-						.name-label{
+						.name-label {
 							font-size: 1.5rem;
 						}
 					}
-					.email-box{
-						.email-label{
+					.email-box {
+						.email-label {
 							font-size: 1.5rem;
 						}
 					}
 				}
-				.message-box{
-					textarea{
+				.message-box {
+					textarea {
 						width: 450px;
 						max-width: 450px;
 						height: 250px;
 					}
-						.message-label{
-							padding: 0 0.5em;
-							left: 8px;
-							font-size: 1.5rem;
-						}
+					.message-label {
+						padding: 0 0.5em;
+						left: 8px;
+						font-size: 1.5rem;
+					}
 				}
 			}
+			
 		}
 	}
 }
@@ -839,7 +944,7 @@ header {
 			}
 			.about-us-text {
 				width: 60%;
-
+				
 				h3 {
 					text-align: center;
 					padding: 1em 0 4em;
@@ -848,6 +953,8 @@ header {
 					font-size: 2.3rem;
 					text-align: center;
 					padding-top: 1em;
+					
+					padding-right: 1em;
 					.span-text {
 						font-size: 2.7rem;
 					}
@@ -862,6 +969,7 @@ header {
 						display: flex;
 						align-items: flex-start;
 						justify-content: center;
+						gap: 1em;
 						p {
 							display: flex;
 							width: 200px;
@@ -927,44 +1035,43 @@ header {
 		}
 	}
 	.contact {
-		.wrapper{
-			.contact-box{
+		.wrapper {
+			.contact-box {
 				gap: 1.7em;
-				.contact-btn{
-					padding: .7em 2.2em;
+				.contact-btn {
+					padding: 0.7em 2.2em;
 					font-size: 1.7rem;
-
 				}
-				.contact-info{
+				.contact-info {
 					gap: 1.4em;
-					input{
+					input {
 						width: 850px;
 						padding: 1em 1.6em;
 					}
-					.name-box{
+					.name-box {
 						position: relative;
-						.name-label{
+						.name-label {
 							font-size: 1.6rem;
 						}
 					}
-					.email-box{
-						.email-label{
+					.email-box {
+						.email-label {
 							font-size: 1.6rem;
 						}
 					}
 				}
-				.message-box{
-					textarea{
+				.message-box {
+					textarea {
 						width: 850px;
 						max-width: 850px;
 						height: 250px;
 						padding: 1em;
 					}
-						.message-label{
-							padding: 0 0.5em;
-							left: 8px;
-							font-size: 1.7rem;
-						}
+					.message-label {
+						padding: 0 0.5em;
+						left: 8px;
+						font-size: 1.7rem;
+					}
 				}
 			}
 		}
@@ -990,6 +1097,26 @@ header {
 					font-size: 1.85rem;
 				}
 			}
+		}
+	}
+	footer{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		.logo{
+			font-family: 'Playfair Display', sans-serif;
+			color: $dark;
+			font-size: 3.5rem;
+			padding-top: .5em;
+			font-weight: 500;
+		}
+		p{
+			span{
+				font-weight: 700;
+			}
+			font-size: 2.8rem;
+			padding: 1em;
 		}
 	}
 	header {

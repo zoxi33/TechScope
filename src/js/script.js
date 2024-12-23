@@ -4,7 +4,12 @@ const nav = document.querySelector('nav')
 const sidebar= document.querySelector('.sidebar')
 const navLinks = sidebar.querySelectorAll('a')
 const html = document.body
-console.log(html);
+const currentYear=document.querySelector('.year')
+const handleCurrentYear = () => {
+	const year = new Date().getFullYear()
+	currentYear.innerText = year
+}
+handleCurrentYear()
 const showSidebar = () => {
 
     sidebar.style.display='flex'
