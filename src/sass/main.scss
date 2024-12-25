@@ -38,10 +38,13 @@ nav {
 
 	.logo {
 		font-family: 'Playfair Display', sans-serif;
-		color: $dark;
 		font-size: 2.5rem;
 		padding: 1em;
 		font-weight: 500;
+		a {
+			text-decoration: none;
+			color: $dark;
+		}
 	}
 	.hamburger-icon {
 		font-size: 3rem;
@@ -144,7 +147,7 @@ header {
 	position: relative;
 
 	height: 100vh;
-	padding-top: 96px;
+	padding-top: 110px;
 	.text-container {
 		display: flex;
 		justify-content: center;
@@ -164,12 +167,18 @@ header {
 		.hero-btn {
 			background: none;
 			border: none;
-			margin: 0.2em;
+			margin: 0.5em;
 			background-color: $purple;
 			color: #fff;
-			padding: 0.6em 1em;
+			padding: 0.5em 1em;
 			border-radius: 29px;
+			transition: color 0.3s, background-color 0.3s, border 0.3s;
 			cursor: pointer;
+		}
+		.hero-btn:hover {
+			background-color: $creme;
+			color: $dark;
+			border: 1px solid $dark;
 		}
 	}
 	.rounded-image {
@@ -190,6 +199,8 @@ header {
 }
 ///////////////////////////////about us//////////
 .heading {
+	display: inline-flex;
+	margin-top: 2em;
 	padding: 0.5em 1em 2em;
 	text-align: center;
 	text-transform: uppercase;
@@ -207,7 +218,8 @@ header {
 	}
 }
 .about-us {
-	padding: 2em;
+	text-align: center;
+	padding-bottom: 2em;
 	background-color: #f9f1de;
 
 	.content {
@@ -347,8 +359,10 @@ header {
 .contact {
 	background-color: $light-creme;
 	padding-bottom: 10vh;
+	text-align: center;
 	.heading {
-		padding: 1em 1em 2em;
+		margin-top: 2em;
+		display: inline-flex;
 		&:after {
 			width: 80px;
 		}
@@ -370,44 +384,64 @@ header {
 				gap: 2em;
 				margin-top: 2.5em;
 				// width: 400px;
-				.social-box {
-					background-color: rgba($color: $creme, $alpha: 0.6);
-					// width: 200px;
-					display: flex;
-					height: 208px;
-					align-items: center;
-					justify-content: center;
-					flex-direction: column;
-					border-radius: 12px;
-					font-size: 1.5em;
-					box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.15);
-					i{
-						font-size: 2.5em;
-						padding: 0.5em 0.5em .2em;
-						color: $purple;
+				a {
+					text-decoration: none;
+					color: #000;
+					.social-box {
+						background-color: rgba($color: $creme, $alpha: 0.6);
+						// width: 200px;
+						display: flex;
+						height: 208px;
+						align-items: center;
+						justify-content: center;
+						flex-direction: column;
+						border-radius: 12px;
+						transition:  box-shadow .3s;
+
+						font-size: 1.5em;
+						box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
+						i {
+							font-size: 2.5em;
+							padding: 0.5em 0.5em 0.2em;
+							color: $purple;
+						}
+						h3 {
+							color: $dark;
+							font-size: 1.8rem;
+							transition: scale .3s;
+						}
+						text-align: center;
+						p {
+							width: 150px;
+							height: 84px;
+							font-size: 1.5rem;
+							padding: 1em;
+							word-wrap: break-word;
+						}
 					}
-					h3{
+					.social-box:hover  h3 {
 						color: $dark;
-						font-size: 1.8rem;
-						
+						scale: 1.08;
 					}
-					text-align: center;
-					p{
-						width: 150px;
-						height: 84px;
-						font-size: 1.5rem;
-						padding: 1em;
-						word-wrap: break-word;
+					.social-box:hover{
+						box-shadow: 0 0 13px rgba($color: #000000, $alpha: 0.25);
+
 					}
+					
 				}
 			}
 			.contact-btn {
 				background: none;
 				border: 1px solid $purple;
-				padding: 0.7em 2.2em;
+				padding: 1em 2em;
 				font-size: 1.5rem;
 				cursor: pointer;
-				border-radius: 6px;
+				transition: background-color 0.3s, color 0.3s;
+				border-radius: 29px;
+			}
+			.contact-btn:hover {
+				background-color: $purple;
+				color: $creme;
 			}
 			.contact-info {
 				width: 100%;
@@ -475,6 +509,7 @@ header {
 					border: 2px solid $purple;
 					width: 300px;
 					max-width: 300px;
+					min-width: 300px;
 					height: 200px;
 					padding: 1em;
 					border-radius: 6px;
@@ -503,20 +538,20 @@ header {
 	}
 }
 //////////////footer
-footer{
+footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	.logo{
+	.logo {
 		font-family: 'Playfair Display', sans-serif;
 		color: $dark;
 		font-size: 2.5rem;
-		padding-top: .5em;
+		padding-top: 0.5em;
 		font-weight: 500;
 	}
-	p{
-		span{
+	p {
+		span {
 			font-weight: 700;
 		}
 		font-size: 1.8rem;
@@ -707,7 +742,7 @@ footer{
 		}
 	}
 	.about-us {
-		padding: 2em;
+		padding-bottom: 2em;
 		background-color: #f9f1de;
 		.heading {
 			padding: 0.5em 1em 2em;
@@ -761,7 +796,7 @@ footer{
 					padding: 1.2em;
 					display: flex;
 					height: 50%;
-					h4 {
+					h3 {
 						font-size: 1.7rem;
 						padding-top: 0.8em;
 						color: $purple;
@@ -789,55 +824,59 @@ footer{
 		.wrapper {
 			.contact-box {
 				gap: 1.4em;
-				
-			.social-info {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				flex-wrap: wrap;
-				flex-direction: row;
-				gap: 2em;
-				margin-top: 2.5em;
-				// width: 400px;
-				.social-box {
-					background-color: rgba($color: $creme, $alpha: 0.6);
-					// width: 200px;
+
+				.social-info {
 					display: flex;
-					height: 308px;
-					align-items: center;
 					justify-content: center;
-					flex-direction: column;
-					border-radius: 12px;
-					font-size: 3rem;
-					box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.15);
-					i{
-						font-size: 2.4em;
-						padding: 0.5em 0.5em .4em;
-						color: $purple;
-					}
-					h3{
-						color: $dark;
-						font-size: 2.2rem;
-						text-transform: uppercase;
-						
-					}
-					text-align: center;
-					p{
-						width: 250px;
-						height: 84px;
-						font-size: 1.9rem;
-						padding: 1em;
-						word-wrap: break-word;
+					align-items: center;
+					flex-wrap: wrap;
+					flex-direction: row;
+					gap: 2em;
+					margin-top: 2.5em;
+					// width: 400px;
+					a {
+						text-decoration: none;
+						color: #000;
+						.social-box {
+							background-color: rgba($color: $creme, $alpha: 0.6);
+							// width: 200px;
+							display: flex;
+							height: 308px;
+							align-items: center;
+							justify-content: center;
+							flex-direction: column;
+							border-radius: 12px;
+							font-size: 3rem;
+							box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.15);
+							i {
+								font-size: 2.4em;
+								padding: 0.5em 0.5em 0.4em;
+								color: $purple;
+							}
+							h3 {
+								color: $dark;
+								font-size: 2.2rem;
+								text-transform: uppercase;
+							}
+							text-align: center;
+							p {
+								width: 250px;
+								height: 84px;
+								font-size: 1.9rem;
+								padding: 1em;
+								word-wrap: break-word;
+							}
+						}
 					}
 				}
-			}
 				.contact-btn {
 					background: none;
 					border: 1px solid $purple;
-					padding: 0.7em 2.2em;
-					font-size: 1.5rem;
+					padding: 1em 2em;
+
+					font-size: 1.7rem;
 					cursor: pointer;
-					border-radius: 6px;
+					border-radius: 29px;
 				}
 				.contact-info {
 					width: 100%;
@@ -867,6 +906,7 @@ footer{
 					textarea {
 						width: 450px;
 						max-width: 450px;
+						min-width: 450px;
 						height: 250px;
 					}
 					.message-label {
@@ -876,7 +916,6 @@ footer{
 					}
 				}
 			}
-			
 		}
 	}
 }
@@ -907,7 +946,7 @@ footer{
 		}
 	}
 	.about-us {
-		padding: 2em;
+		padding-bottom: 2em;
 		height: 70vh;
 		background-color: #f9f1de;
 
@@ -944,7 +983,7 @@ footer{
 			}
 			.about-us-text {
 				width: 60%;
-				
+
 				h3 {
 					text-align: center;
 					padding: 1em 0 4em;
@@ -953,7 +992,7 @@ footer{
 					font-size: 2.3rem;
 					text-align: center;
 					padding-top: 1em;
-					
+
 					padding-right: 1em;
 					.span-text {
 						font-size: 2.7rem;
@@ -1004,7 +1043,7 @@ footer{
 				.top {
 					padding: 1.2em;
 					height: 50%;
-					h4 {
+					h3 {
 						font-size: 1.85rem;
 						padding-top: 0.8em;
 
@@ -1039,7 +1078,7 @@ footer{
 			.contact-box {
 				gap: 1.7em;
 				.contact-btn {
-					padding: 0.7em 2.2em;
+					padding: 1em 2em;
 					font-size: 1.7rem;
 				}
 				.contact-info {
@@ -1064,6 +1103,7 @@ footer{
 					textarea {
 						width: 850px;
 						max-width: 850px;
+						min-width: 850px;
 						height: 250px;
 						padding: 1em;
 					}
@@ -1099,23 +1139,23 @@ footer{
 			}
 		}
 	}
-	footer{
+	footer {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		.logo{
+		.logo {
 			font-family: 'Playfair Display', sans-serif;
 			color: $dark;
-			font-size: 3.5rem;
-			padding-top: .5em;
+			font-size: 3rem;
+			padding-top: 0.5em;
 			font-weight: 500;
 		}
-		p{
-			span{
+		p {
+			span {
 				font-weight: 700;
 			}
-			font-size: 2.8rem;
+			font-size: 2rem;
 			padding: 1em;
 		}
 	}
@@ -1157,7 +1197,7 @@ footer{
 				.top {
 					padding: 1.2em;
 					height: 50%;
-					h4 {
+					h3 {
 						font-size: 2.1rem;
 						padding-top: 0.8em;
 
@@ -1197,4 +1237,28 @@ footer{
 			}
 		}
 	}
+}
+@media (min-width: 2000px) {
+	.heading{
+		font-size: 3rem;
+	}
+header {
+	
+	
+	.rounded-image {
+		position: absolute;
+		overflow: hidden;
+		z-index: -1;
+		bottom: 0;
+		width: 100%;
+		height: 1000px; /* Dopasuj wysokość do swoich potrzeb */
+	}
+
+	.rounded-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover; /* Upewnij się, że obraz wypełnia kontener */
+		clip-path: ellipse(100% 60% at 50% 100%);
+	}
+}
 }

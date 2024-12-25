@@ -23,12 +23,9 @@
 
 
 
-        <span class="logo">TechScope</span>
+        <span class="logo"><a href="#">TechScope</a></span>
 
         <ul class="hideOnMobile menu">
-            <li class="hideOnMobile active">
-                <a href="#">Home</a>
-            </li>
             <li class="hideOnMobile">
                 <a href="#about-us">O nas</a>
             </li>
@@ -70,12 +67,15 @@
             <h1 class="hero-heading">Nowoczesne rozwiązania IT dla Twojego biznesu!</h1>
             <p class="hero-text">Dedykowane rozwiązania IT dla małych i średnich przedsiębiorstw. Innowacyjność,
                 funkcjonalność i estetyka - wszystko w jednym miejscu.</p>
-            <a href="#"> <button class="btn hero-btn">SPRAWDŹ</button></a>
+            <a href="#offers-section"> <button class="btn hero-btn">SPRAWDŹ</button></a>
         </div>
         <div class="rounded-image">
             <img src="./dist/img/marvin-meyer-SYTO3xs06fU-unsplash.jpg" alt="Zaokrąglone zdjęcie">
         </div>
     </header>
+    <main>
+
+    
     <section class="section about-us" id="about-us">
         <h2 class="heading">Poznaj nas bliżej</h2>
 
@@ -103,7 +103,7 @@
             <div class="offer">
                 <div class="top">
                     <img src="./dist/img/code.png" alt="">
-                    <h4 class="offer-heading">Tworzenie <br>oprogramowania </h4>
+                    <h3 class="offer-heading">Tworzenie <br>oprogramowania </h3>
                 </div>
                 <div class="middle"></div>
                 <div class="bottom">
@@ -113,7 +113,7 @@
             <div class="offer">
                 <div class="top">
                     <img src="./dist/img/internet.png" alt="">
-                    <h4 class="offer-heading">Strony <br> internetowe</h4>
+                    <h3 class="offer-heading">Strony <br> internetowe</h3>
                 </div>
                 <div class="middle"></div>
                 <div class="bottom">
@@ -123,9 +123,9 @@
             <div class="offer">
                 <div class="top">
                     <img src="./dist/img/transformation.png" alt="">
-                    <h4 class="offer-heading">Konsultacje
+                    <h3 class="offer-heading">Konsultacje
                         <br> technologiczne
-                    </h4>
+                    </h3>
                 </div>
                 <div class="middle"></div>
                 <div class="bottom">
@@ -135,9 +135,9 @@
             <div class="offer">
                 <div class="top">
                     <img src="./dist/img/analysis.png" alt="">
-                    <h4 class="offer-heading">Zarządzanie
+                    <h3 class="offer-heading">Zarządzanie
                         <br> danymi
-                    </h4>
+                    </h3>
                 </div>
                 <div class="middle"></div>
                 <div class="bottom">
@@ -150,45 +150,51 @@
         <h2 class="heading">Kontakt</h2>
         <div class="wrapper">
 
-      
-        <div class="contact-box">
-            <div class="contact-info">
-                <div class="name-box">
 
-                    <input type="text" class="name" name="xd">
-                    <label class="name-label" for="xd">Imie i Nazwisko:</label>
-                </div>
-                <div class="email-box">
+            <div class="contact-box">
+                <div class="contact-info">
+                    <div class="name-box">
 
-                    <input type="email" class="email" name="xd2">
-                    <label class="email-label" for="xd2">Email: </label>
+                        <input type="text" class="name" name="xd">
+                        <label class="name-label" for="xd">Imie i Nazwisko:</label>
+                    </div>
+                    <div class="email-box">
+
+                        <input type="email" class="email" name="xd2">
+                        <label class="email-label" for="xd2">Email: </label>
+                    </div>
                 </div>
-            </div>
-            <div class="message-box">
-                <textarea name="xdd" id="" class="message"></textarea>
-                <label class="message-label" for="xdd">Wiadomość: </label>
-            </div>
-            <button class="contact-btn">Wyslij</button>
-            <div class="social-info">
-                <div class="social-box">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <h3>ADRES</h3>
-                    <p>bulw. Jóźwik 71a - Sulejówek, LD / 38-409</p>
+                <div class="message-box">
+                    <textarea name="xdd" id="" class="message"></textarea>
+                    <label class="message-label" for="xdd">Wiadomość: </label>
                 </div>
-                <div class="social-box">
-                    <i class="fa-solid fa-phone"></i>
-                    <h3>Telefon</h3>
-                    <p>+48 123 456 789</p>
-                </div>
-                <div class="social-box">
-                    <i class="fa-solid fa-envelope"></i>
-                    <h3>E-MAIL</h3>
-                    <p>Templatemail@mail.com</p>
+                <button class="contact-btn">Wyslij</button>
+                <div class="social-info">
+                    <a href="https://www.google.pl/maps/place/Warszawa/@52.2330974,20.8966155,11z/data=!3m1!4b1!4m6!3m5!1s0x471ecc669a869f01:0x72f0be2a88ead3fc!8m2!3d52.2296756!4d21.0122287!16zL20vMDgxbV8?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">
+                    <div class="social-box">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h3>ADRES</h3>
+                        <p>bulw. Jóźwik 71a - Sulejówek, LD / 38-409</p>
+                    </div>
+                </a>
+                <a href="tel:+48123456789">
+                    <div class="social-box">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>Telefon</h3>
+                        <p>+48 123 456 789</p>
+                    </div></a>
+                    <a href="mailto:Templatemail@mail.com">
+                    <div class="social-box">
+                        <i class="fa-solid fa-envelope"></i>
+                        <h3>E-MAIL</h3>
+                        <p>Templatemail@mail.com</p>
+                    </div>
+                </a>
                 </div>
             </div>
         </div>
-    </div>
     </section>
+</main>
     <footer>
         <span class="logo">TechScope</span>
         <p>&copy;<span class="year"></span> Wszystkie Prawa Zastrzeżone</p>
