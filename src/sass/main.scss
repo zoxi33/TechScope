@@ -106,11 +106,16 @@ nav {
 	box-shadow: 3px 3px 5px rgba($color: #000000, $alpha: 0.2);
 }
 .sidebar {
-	.close-icon {
-		i {
-			padding: 1em 1em 1em 0;
+	.close-btn-icon{
+		border: none;
+		background: none;
+		align-self: flex-start;
+		.close-icon {
+			i {
+				padding: 1em 1em 1em 1em;
+			}
+			font-size: 3rem;
 		}
-		font-size: 2.5rem;
 	}
 	position: fixed;
 	top: 0;
@@ -743,7 +748,7 @@ footer {
 			}
 		}
 		.close-btn-icon {
-			justify-content: flex-end;
+			justify-content: flex-start;
 		}
 	}
 }
