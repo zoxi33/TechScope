@@ -174,9 +174,11 @@ header {
 			font-size: 1.6rem;
 			color: #484d57;
 		}
+
+		
 		.hero-btn {
 			background: none;
-			border: none;
+			border: 1px solid transparent;
 			margin: 0.5em;
 			background-color: $purple;
 			color: #fff;
@@ -185,6 +187,7 @@ header {
 			transition: color 0.3s, background-color 0.3s, border 0.3s;
 			cursor: pointer;
 		}
+	
 		.hero-btn:hover {
 			background-color: $creme;
 			color: $dark;
@@ -473,10 +476,7 @@ header {
 					.name {
 						z-index: 1;
 					}
-					.name:focus ~ .name-label {
-						top: 0;
-						background-color: $light-creme;
-					}
+					
 					.name-label {
 						padding: 0 0.5em;
 						position: absolute;
@@ -484,7 +484,8 @@ header {
 						pointer-events: none;
 						z-index: 2;
 						left: 8px;
-						top: 50%;
+						top: 0;
+						background-color: $light-creme;
 						font-size: 1.4rem;
 						transform: translateY(-50%);
 					}
@@ -494,18 +495,15 @@ header {
 					.email {
 						z-index: 1;
 					}
-					.email:focus ~ .email-label {
-						top: 0;
-						background-color: $light-creme;
-					}
 					.email-label {
 						padding: 0 0.5em;
 						position: absolute;
 						transition: top 0.3s;
 						pointer-events: none;
 						z-index: 2;
+						top: 0;
+						background-color: $light-creme;
 						left: 8px;
-						top: 50%;
 						font-size: 1.4rem;
 						transform: translateY(-50%);
 					}
@@ -592,6 +590,15 @@ footer {
 
 	.hideOnDesktop {
 		display: block;
+	}
+	header {
+
+		.text-container {
+		a{
+			padding: 0 1em 1em;
+		
+		}
+	}
 	}
 }
 @media (min-width: 1200px) {

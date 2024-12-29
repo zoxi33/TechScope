@@ -5,6 +5,22 @@ const sidebar= document.querySelector('.sidebar')
 const navLinks = sidebar.querySelectorAll('a')
 const html = document.body
 const currentYear=document.querySelector('.year')
+
+const nameInputs = document.querySelectorAll('.inputs')
+
+
+nameInputs.forEach(input =>{
+    input.addEventListener('keyup',()=>{
+        if(input.value!=''){
+            input.nextElementSibling.classList.add('input-transform')
+        }else{
+            input.nextElementSibling.classList.remove('input-transform')
+
+        }
+        console.log(input.nextElementSibling);
+    })
+})
+
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear()
 	currentYear.innerText = year
